@@ -11,15 +11,13 @@ for (let f = 0; f < forms.length; f++) {
   }
 }
 
-// set placeholder for each input
+// step 2 ,3, 4 , set placeholder, create and append label to input
 for (const input of inputs) {
+  // set placeholder for each input
   const text = input.getAttribute('name');
   const capitalized = text.charAt(0).toUpperCase() + text.slice(1);
   input.setAttribute('placeholder', capitalized);
-}
 
-// step 2 + 4 , create and append label to input
-for (const input of inputs) {
   // create label
   const label = document.createElement('label');
   label.setAttribute('class', 'field-label');
